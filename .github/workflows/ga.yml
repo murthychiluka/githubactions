@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Welcome message
+      run: echo "My first GitHub Actions job."
+    - name: list files on my repo
+      run: ls
+    - name: read a file
+      run: cat README.md
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
