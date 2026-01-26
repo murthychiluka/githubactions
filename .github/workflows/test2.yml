@@ -1,0 +1,22 @@
+name: Test2
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v4
+       - name: create a text file
+         run: echo " My second GitHub Actions job." > test2.txt
+ test:
+  runs-on: ubuntu-latest
+  steps:
+       - name: list files
+         run: ls
+       - name: test file
+         run: cat test2.txt | grep -i "second."
+         
+
+
+
+ 
